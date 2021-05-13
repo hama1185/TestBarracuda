@@ -12,6 +12,7 @@ public class TestModel : MonoBehaviour
 
     private Model runtimemodel;
     private IWorker worker;
+    private Texture2D texture;
 
     // Start is called before the first frame update
     void Start(){
@@ -20,19 +21,19 @@ public class TestModel : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        Tensor inTensor = new Tensor(input);
+        Inference(inTensor);
+        inTensor.Dispose();
     }
     // 推論
-    void Inference(Tensor input){
-        worker.Execute(input);
+    void Inference(Tensor iTensor){
+        worker.Execute(iTensor);
         Tensor outTensor = worker.PeekOutput();
         outTensor.ToRenderTexture(output, 0, 0, 1/255f, 0, null);
         outTensor.Dispose();
     }
-
     void OnDestroy(){
-        worker?.Dispose();
+        worker.Dispose();
     }
 }
