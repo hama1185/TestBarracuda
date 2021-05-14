@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class WebCamera : MonoBehaviour
 {
     public RawImage screen;
+    public RenderTexture WebCamIn;
+
 
     WebCamTexture webCamTexture;
     WebCamDevice[] webCamDevices;
@@ -17,6 +19,10 @@ public class WebCamera : MonoBehaviour
         webCamDevices = WebCamTexture.devices;
         screen.texture = webCamTexture;
         webCamTexture.Play();
+    }
+
+    void Update(){
+        Graphics.Blit(webCamTexture, WebCamIn);
     }
 
     public void ChangeWebCamera(){
