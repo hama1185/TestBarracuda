@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb2b38edeb328c439ff19503fd7f2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelasset: {fileID: 5022602860645237092, guid: 8b27cb987e9e4f1409fc4fca4d48fee2,
+  modelasset: {fileID: 5022602860645237092, guid: e23474edb38d7964cbb88aec6e15b352,
     type: 3}
   input: {fileID: 8400000, guid: e0b9ccecd8b39b14090694811f55a600, type: 2}
   output: {fileID: 8400000, guid: 6861100e0f1327e4783837f4676840e8, type: 2}
