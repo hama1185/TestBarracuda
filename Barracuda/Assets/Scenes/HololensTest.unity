@@ -741,7 +741,7 @@ MonoBehaviour:
   obj: {fileID: 4900000, guid: d3f3d41e665570b43a9f5461c5aedd44, type: 3}
   modelasset: {fileID: 5022602860645237092, guid: 07d039a2d69d6034290fa6b0f18e2dc8,
     type: 3}
-  input: {fileID: 0}
+  input: {fileID: 8400000, guid: 183b54da987709c4db886e75a30cd119, type: 2}
   output: {fileID: 410712821}
 --- !u!1 &1973346319
 GameObject:
